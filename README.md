@@ -30,7 +30,7 @@ Ensure you have configured your AWS credentials properly. You can set up your AW
 
 ```bash
 git clone https://github.com/your-username/healthcare-aws-analysis.git
-cd healthcare-aws-analysis
+cd data-validation-framework-to-validate-data-from-Datalake-till-Datawarehouse
 ```
 
 2. Update the `config.json` file with your AWS credentials and other necessary configurations.
