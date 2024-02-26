@@ -35,10 +35,10 @@ cd data-validation-framework-to-validate-data-from-Datalake-till-Datawarehouse
 
 2. Update the `config.json` file with your AWS credentials and other necessary configurations.
 
-3. Run the Python script `healthcare_analysis.py`:
+3. Run the Python script `main.py`:
 
 ```bash
-python healthcare_analysis.py
+python main.py
 ```
 
 ### Description
