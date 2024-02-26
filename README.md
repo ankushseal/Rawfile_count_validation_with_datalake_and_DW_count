@@ -1,4 +1,85 @@
-workflow :
+## Healthcare Data Analysis with AWS Services
+
+This repository contains a Python script for analyzing healthcare data using various AWS services including Amazon S3, Amazon Athena, and PostgreSQL. The script retrieves data from different sources, performs analysis, and sends a summary report via email.
+
+### Prerequisites
+
+Before running the script, ensure you have the following dependencies installed:
+
+- Python 3.x
+- `boto3`
+- `pandas`
+- `psycopg2`
+- `environ`
+- `pandasql`
+- `pretty_html_table`
+
+You can install the dependencies via pip:
+
+```bash
+pip install boto3 pandas psycopg2 environ pandasql pretty_html_table
+```
+
+### Configuration
+
+Ensure you have configured your AWS credentials properly. You can set up your AWS credentials using AWS CLI or directly in the script.
+
+### Usage
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/your-username/healthcare-aws-analysis.git
+cd healthcare-aws-analysis
+```
+
+2. Update the `config.json` file with your AWS credentials and other necessary configurations.
+
+3. Run the Python script `healthcare_analysis.py`:
+
+```bash
+python healthcare_analysis.py
+```
+
+### Description
+
+This script performs healthcare data analysis using the following steps:
+
+1. **Amazon S3 Interaction**: Connects to Amazon S3 using the `boto3` library to retrieve data files.
+
+2. **File Count**: Counts the number of rows in each data file and prints the results.
+
+3. **Athena Interaction**: Utilizes Amazon Athena to query data snapshots and counts the records in each snapshot.
+
+4. **PostgreSQL Interaction**: Connects to a PostgreSQL database to count records in landing tables.
+
+5. **Email Notification**: Generates a summary report containing file counts, Athena counts, and PostgreSQL counts. Sends the report via email using SMTP.
+
+### Input Data
+
+The input data consists of CSV files stored in an Amazon S3 bucket and snapshots in Amazon Athena.
+
+### Output
+
+The output is a summary report sent via email, containing the counts of records in data files, Athena snapshots, and PostgreSQL landing tables.
+
+### Contributing
+
+Contributions are welcome! If you have suggestions, feature requests, or bug fixes, please feel free to open an issue or create a pull request.
+
+### License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+### Acknowledgements
+
+- [boto3](https://github.com/boto/boto3) - AWS SDK for Python.
+- [pandas](https://github.com/pandas-dev/pandas) - Python data analysis library.
+- [psycopg2](https://github.com/psycopg/psycopg2) - PostgreSQL adapter for Python.
+- [pretty-html-table](https://github.com/dexplo/pretty-html-table) - Python library for generating HTML tables.
+
+
+### workflow :
 1st we download all the daily files from s3 à Then we count the rows of all the files and mention those counts in an Excel spreadsheet à Then we take Athena count for that day’s snapshot and mention those counts in that spreadsheet à And after Integration job completion we take the landing table count and mention those in that spreadsheet à At the end we send a mail with those details in tabular format.
 
  This python framework which can help us to achieve automation of that upper manual workflow. By that script :-
