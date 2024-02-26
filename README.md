@@ -67,9 +67,6 @@ The output is a summary report sent via email, containing the counts of records 
 
 Contributions are welcome! If you have suggestions, feature requests, or bug fixes, please feel free to open an issue or create a pull request.
 
-### License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ### Acknowledgements
 
