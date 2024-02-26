@@ -1,4 +1,4 @@
-## Healthcare Data Analysis with Python and AWS Services
+## A python-based data validation framework to validate data from Datalake till Datawarehouse
 
 This repository contains a Python script for analyzing healthcare data using various AWS services including Amazon S3, Amazon Athena, and PostgreSQL. The script retrieves data from different sources, performs analysis, and sends a summary report via email.
 
